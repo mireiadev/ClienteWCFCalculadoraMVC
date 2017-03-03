@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#dividir").click(function ()
+            {               
+                var num1 = $("#num1").val();
+                var num2 = $("#num2").val();
+                $("#caparesultado").load("/Calculadora/Division?num1=" + num1+"&num2=" + num2);
+            });
+        });
+    </script>
+}
+
+<h2>CALCULADORA</h2>
+<hr />
+<form method="get">
+    <div>
+        <label>Número 1:</label>
+        <input type="text" id="num1" class="form-control"/>
+    </div>
+    <div>
+        <label>Número 2:</label>
+        <input type="text" id="num2" class="form-control"/>
+    </div>
+    <hr />
+   <div>
+       <button type="button" id="sumar" class="btn-success">Sumar</button>
+       <button type="button" id="restar" class="btn-success">Restar</button>
+       <button type="button" id="multiplicar" class="btn-success">Multiplicar</button>
+       <button type="button" id="dividir" class="btn-success">Dividir</button>
+   </div>
+    
+</form>
+<div id="caparesultado"></div>

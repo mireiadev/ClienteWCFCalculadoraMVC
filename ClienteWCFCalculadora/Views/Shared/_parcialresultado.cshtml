@@ -1,0 +1,14 @@
+﻿<h2>
+   @if (ViewBag.Error==true)
+   {
+       <div class="text-center text-danger">
+           @ViewBag.Resultado
+       </div>
+   }
+   else
+   {
+       <div class="text text-danger text-info">
+            Resultado: @ViewBag.Resultado
+       </div>
+   }
+</h2>
